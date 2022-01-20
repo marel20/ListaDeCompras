@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/stylee.css">
+    <title>Listado de compras</title>
+</head>
+<body>
+    <section>
+        <div class="titulos">
+            <h3 class="t1">Descripción</h3>
+            <h3 class="t2">Cantidad</h3>
+            <h3 class="t3">Precio Unitario</h3>
+        </div>
+        <div class="titulos">
+            <input type="text" size="30" class="c1" id="descripcion" value="">
+            <input type="number" size="15" class="c2" id="cantidad" value="">
+            <input type="number" size="20" class="c3" id="unitario" value="">
+            <input type="button" class="c4" id="suma" value="+">
+
+        </div>
+        <hr>
+        <div id="anotador" class="articulos">
+            <h5 id="col1"></h5>
+            <h5 id="col2"></h5>
+            <h5 id="col3"></h5>
+            <h5 id="col4"></h5>
+        </div>
+        <hr>
+        <b><h3>Totales</h3></b> <br>
+        <b>Total cantidad de artículos: <span id="totalArt">0</span></b> <br> <br>
+        <b>Total en pesos: $ <span id="totalPesos">0</span></b>
+    </section>
+
+
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $('#suma').on('click', fnSumar);
+
+
+
+
+
+
+
+            function fnSumar() {
+                console.log('entramos en sumar')
+                objeto = $('#descripcion').val();
+                cantidad = $('#cantidad').val();
+                precio = $('#unitario').val();
+
+                $('#col1').append(objeto + "<br>");
+                $('#col2').append(cantidad + "<br>");
+                $('#col3').append(precio + "<br>");
+                $('#col4').append(cantidad * precio + "<br>");
+                
+                canTotal = parseInt($('#totalArt').text());
+                canTotal+= parseInt(cantidad);
+                $('#totalArt').text(canTotal);
+
+                pesosTotal = parseInt($('#totalPesos').text());
+                pesosTotal+= parseInt((cantidad * precio));
+                $('#totalPesos').text(pesosTotal);
+
+
+
+            }
+
+
+
+
+
+
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>
