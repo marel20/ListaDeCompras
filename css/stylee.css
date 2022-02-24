@@ -29,7 +29,7 @@ section{
 }
 .t3{
     margin-top: 1%;
-    margin-left: 5%;
+    margin-left: 11%;
     font: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -41,7 +41,7 @@ section{
     overflow: auto;
 }
 .c3{
-    margin-left: 1%;
+    margin-left: 1.5%;
     overflow: auto;
 }
 .c4{
@@ -58,4 +58,24 @@ b{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 130%;
+}
+#suma{
+    border-radius: 20px;
+    padding: 1%;
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+    background-color: black;
+    color: white;
+}
+#suma:hover{background-color: white; color: black;}
+input{
+    border-radius: 10px;
+    padding: 1%;
+}
+.totales{
+    padding: 1%;
+    margin: 1% 15%;
 }
